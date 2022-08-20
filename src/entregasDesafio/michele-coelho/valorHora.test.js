@@ -1,5 +1,5 @@
 
-const {calcularValorPorHora}=require('../../src/dominio/calculadora/hora/valorHora.js')
+const {calcularValorPorHora}=require('../../dominio/calculadora/hora/valorHora.js')
 
 test('1+2 é 3',()=>{
 
@@ -7,7 +7,7 @@ test('1+2 é 3',()=>{
 })
 
 //outro teste
-
+describe('calcular vaor por hora',()){
  test('Calcular o valor por hora ',()=>{
   const salario=100
   const resultatdoCalculado=calcularValorPorHora(salario)
@@ -17,3 +17,6 @@ test('1+2 é 3',()=>{
   expect(resultatdoCalculado).not.toBe(resultadoEsperado)
  })
  
+ test('2000 reais de renda mensal retorna 12 reais por hora', ()=>{
+  expect(2000).toBe(12)
+ })}
